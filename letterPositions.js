@@ -1,40 +1,25 @@
-const assertArraysEqual = function(input1, input2) {
-  if (input1.length !== input2.length) {
-    return false;
-  } else
-    for (let i = 0; i < input1.length; i++) {
-      if (input1[i] !== input2[i]) {
-        console.log(`❌❌❌ Assertion Failed: ${input1} !== ${input2}}`);
-        return false;
-      }
-    }
-  console.log(`👍👍👍 Assertion Passed: ${input1} === ${input2}`);
-  return true;
-};
-
-const eqArrays = function(input1, input2) {
-  if (input1.length !== input2.length) {
-    return false;
-  } else
-    for (let i = 0; i < input1.length; i++) {
-      if (input1[i] !== input2[i]) {
-        return false;
-      }
-    }
-  return true;
-};
-
-
-const without = function(source, itemsToRemove) {
-  let removed = [];
+const letterPositions = function(sentence) {
+  const results = {};
   
-  for (i = 0; i < source.length; i++) {
-    if (itemsToRemove.includes(source[i]) === true) {
+  let splitSentence = sentence.split("");
+
+  for (const i in splitSentence) {
+    let newArray = [];
+    if (splitSentence[i] === " ") {
       continue;
     }
-    removed.push(source[i]);
+    results[splitSentence[i]] = newArray;
   }
-  return removed;
+  console.log("results: ", results);
+  console.log(results.length);
+  
+  for (let s = 0; s < splitSentence.length; s++) {
+    if (splitSentence[s] === " ") {
+      continue;
+    }
+    results[splitSentence[s]].push(s);
+  }
+  return results;
 };
 
-assertArraysEqual(eqArrays(without([1, 2, 3], [1]), [2, 3]), true); // => should PASS
+console.log(letterPositions("hello"));
