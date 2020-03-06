@@ -1,4 +1,4 @@
-/*const assertArraysEqual = function(input1, input2) {
+const assertArraysEqual = function(input1, input2) {
   if (input1.length !== input2.length) {
     return false;
   } else
@@ -24,7 +24,7 @@ const eqArrays = function(input1, input2) {
   return true;
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS*/
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 
 
 
