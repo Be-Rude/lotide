@@ -10,5 +10,7 @@ const eqArrays = function(input1, input2) {
   return true;
 };
 
-console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => should PASS
+module.exports = eqArrays;
+
+// console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => should PASS
 
