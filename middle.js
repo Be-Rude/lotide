@@ -4,15 +4,13 @@ const middle = function(input) {
   let newArray = [];
   if (input.length < 3) {
   return newArray;
-} else
-if (input.length % 2 !== 0) {
+  } 
+  if (input.length % 2 !== 0) {
   newArray.push(Math.ceil(input.length/2));
-  return newArray;
-} else
-  if (input.length % 2 === 0) {
-  newArray.push((input.length/2), (input.length/2) + 1);
-    return newArray;
+  } else {
+  newArray.push((input.length/2), (input.length/2) + 1); 
   }
+  return newArray;
 };
 
 // const assertArraysEqual = function(input1, input2) {

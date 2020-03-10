@@ -1,11 +1,13 @@
 const assertEqual = require('./assertEqual')
 
-const tailArray = [];
+
 
 const tail = function(words) {
+  const tailArray = [];
   for (let i = 1; i < words.length; i++) {
     tailArray.push(words[i]);
   }
+  return tailArray;
 };
 
 // const assertEqual = function(actual, expected) {
@@ -19,5 +21,5 @@ const tail = function(words) {
 module.exports = tail;
 
 // const words = ["Yo Yo", "Lighthouse", "Labs"];
-// tail(words); // no need to capture the return value since we are not checking it
+// console.log(tail(words)); // no need to capture the return value since we are not checking it
 // assertEqual(words.length, 3);
