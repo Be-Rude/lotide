@@ -1,0 +1,23 @@
+{
+  "name": "@Be-Rude/lotide",
+  "version": "1.0.0",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library",
+  
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Be-Rude/lotide.git"
+  },
+  "author": "Brad Ruud <bradruud@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Be-Rude/lotide/issues"
+  },
+  "homepage": "https://github.com/Be-Rude/lotide#readme"
+}
