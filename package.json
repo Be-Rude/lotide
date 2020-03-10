@@ -1,5 +1,5 @@
 {
-  "name": "@Be-Rude/lotide",
+  "name": "@be-rude/lotide",
   "version": "1.0.0",
   "description": "A mini clone of the [Lodash](https://lodash.com) library",
   "main": "assertArraysEqual.js",
@@ -22,5 +22,8 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^7.1.0"
+  },
+  "dependencies": {
+    "lotide": "^1.0.1"
   }
 }
