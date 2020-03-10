@@ -7,6 +7,7 @@ const dc = { d: ["2", 3], c: "1" };
 const cd2 = { c: "1", d: ["2", 3, 4] };
 
 
+
 const eqObjects = function(object1, object2) {
   let object1Length = Object.keys(object1).length;
   let object2Length = Object.keys(object2).length;
@@ -44,9 +45,16 @@ const eqArrays = function(input1, input2) {
 };
 
 const assertObjectsEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`👍👍👍 Assertion Passed: ${actual} === ${expected}`);
+  const inspect = require('util').inspect;
+  if (eqObjects(actual, expected)) {
+    console.log(`👍👍👍 Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
   } else {
-    console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`❌❌❌ Assertion Failed: ${inspect(actual)} === ${inspect(expected)}`);
   }
 };
+
+
+assertObjectsEqual(ab, ba), true; // => true
+assertObjectsEqual(ab, abc), false; // => false
+assertObjectsEqual(cd, dc), true; // => true
+assertObjectsEqual(cd, cd2), false; // => false
